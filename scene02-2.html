@@ -1,0 +1,59 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, minimum-scale=0.8, user-scalable=no, shrink-to-fit=no">
+	<title>교과평 튜토리얼</title>
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<script type="text/javascript" charset="utf-8" src="js/libs/jquery-1.10.2.min.js"></script><!-- (기본)jQuery -->
+	<script type="text/javascript" charset="utf-8" src="js/libs/jquery-ui-1.9.2.custom.min.js"></script><!-- (기본) jQuery UI-->
+	
+	<link rel="stylesheet" type="text/css" href="css/webfont.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/colors.css">
+	<link rel="stylesheet" type="text/css" href="css/button.css">
+	<link rel="stylesheet" type="text/css" href="css/tutorial_style.css">
+	
+</head>
+
+<body>
+	<div class="container">
+		<div class="inner">
+			<div class="mainview scene02">
+				
+				<div class="img01">
+					<img src="image/tut_0002.png">
+				</div>
+				<div class="speech step0">
+					<span class="bubble none" style="width:600px;height:100px;">
+						<div class="a_C">
+							<p class="txt a_C">
+								본 시험에 앞서 온라인 평가 응시 방법을 알아보겠습니다.<br>
+								<span class="blue">‘ 응시하기 ’ </span>버튼을 클릭하세요.
+							</p>
+						</div>
+					</span>
+				</div>
+				<a href="javascript:" class="highlight_line next_btn step0 none" style="width:90px;height:41px;top:403px;right:314px;"></a>
+		</div>
+	</div>
+</body>
+
+<script>
+	$(document).ready(function(){
+		var stepNum = 1;
+		
+		$(".speech.step0 .bubble").delay(200).fadeIn(600);
+		$(".highlight_line.step0").delay(200).show("pulsate", 2000);
+		
+		$(".next_btn").on("click", function(){
+			document.location = "scene03.html";
+		});
+		
+	});
+</script>
+
+</html>

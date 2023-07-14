@@ -1,0 +1,97 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, minimum-scale=0.8, user-scalable=no, shrink-to-fit=no">
+	<title>교과평 튜토리얼</title>
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<script type="text/javascript" charset="utf-8" src="js/libs/jquery-1.10.2.min.js"></script><!-- (기본)jQuery -->
+	<script type="text/javascript" charset="utf-8" src="js/libs/jquery-ui-1.9.2.custom.min.js"></script><!-- (기본) jQuery UI-->
+	
+	<link rel="stylesheet" type="text/css" href="css/webfont.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/colors.css">
+	<link rel="stylesheet" type="text/css" href="css/button.css">
+	<link rel="stylesheet" type="text/css" href="css/tutorial_style.css">
+	
+</head>
+
+<body>
+	<div class="container">
+		<div class="inner">
+			<div class="mainview scene02">
+				<div id="nextBtn"><a href="#" class="button blue-gradient glossy xlarge">▶ 다음단계</a></div>
+				<div class="img01">
+					<img src="image/tut_0001.png">
+				</div>
+				<div class="speech step0">
+					<span class="bubble none" style="width:600px;height:100px;">
+						<div class="a_C">
+							<p class="txt a_C">
+								로그인 완료 후 화면에 표시된 <span class="blue">응시 교과목 정보</span>를 확인합니다.<br>
+								<span class="blue">‘ ▶ 다음단계 ’ </span>버튼을 클릭하세요.
+							</p>
+						</div>
+					</span>
+				</div>
+				<a href="javascript:" class="highlight_line nolink step0 none" style="width:700px;height:245px;top:398px;right:288px;"></a>
+				
+				<div class="speech step1">
+					<span class="bubble none" style="width:550px;height:125px;">
+						<div class="a_C">
+							<p class="txt a_C">
+								시험에 응시할 수 있는 상태가 되면<br>
+								<span class="blue">해당 교과목 시험 응시란 버튼이 ‘ 응시하기 ’ 로 표시</span> 됩니다.<br>
+								<span class="blue">‘ ▶ 다음단계 ’ </span>버튼을 클릭하세요.
+							</p>
+						</div>
+					</span>
+				</div>
+				
+				<a href="javascript:" class="highlight_line nolink step1 none" style="width:143px;height:245px;top:398px;right:288px;"></a>
+				
+				<div class="speech step2">
+					<span class="bubble none" style="width:740px;height:136px;">
+						<div class="a_C">
+							<p class="txt a_C">
+								본 시험에 앞서 온라인 평가 응시 방법을 알아보겠습니다.<br>
+								<span class="blue">‘ 응시하기 ’ </span>버튼을 클릭하세요.
+							</p>
+						</div>
+					</span>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+
+<script>
+	$(document).ready(function(){
+		var stepNum = 1;
+		
+		$(".speech.step0 .bubble, .highlight_line.step0 ").delay(400).fadeIn(400);
+		
+		$("#nextBtn").on("click", function(){
+			nextStep(stepNum++);
+		});
+		
+		function nextStep(stepNum){
+			$(".speech .bubble").clearQueue().fadeOut(400);
+			$(".highlight_line").clearQueue().fadeOut(400);
+		
+			$(".speech.step"+stepNum+" .bubble").delay(600).fadeIn(400);
+			$(".highlight_line.step"+stepNum).delay(200).fadeIn(400);
+		
+			if(stepNum == 2){
+				document.location = "scene02-2.html";
+			}
+		}
+		
+	});
+</script>
+
+</html>
