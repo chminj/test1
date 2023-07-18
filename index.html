@@ -47,10 +47,16 @@
 	</div>
     <script>
         $(function () {
-            $(window).load(function(){
+           $(window).load(function(){
                 $(".bubble").fadeIn(500);
+			if (window.innerWidth < window.innerHeight) {
+				$('.container').addClass('alert');
+			} else {
+				// 가로모드 - 복구
+				$('.container').removeClass('alert');
+			}
             });
-
+// 가로-세로모드 전환 확인
 		$(window).on("orientationchange", function(event) {
 			$(window).one('resize', function() {
 				if (window.innerWidth < window.innerHeight) {
