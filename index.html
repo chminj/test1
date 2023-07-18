@@ -53,11 +53,12 @@
 
 		$(window).on("orientationchange", function(event) {
 			$(window).one('resize', function() {
-			if (window.innerWidth > window.innerHeight) {
-				//$('div').text('가로 모드 전환')
-			} else {
-				alert('금지');
-			}
+				if (window.innerWidth < window.innerHeight) {
+					$('.container').addClass('alert');
+				} else {
+					// 가로모드 - 복구
+					$('.container').removeClass('alert');
+				}
 			});
 		});
         })
