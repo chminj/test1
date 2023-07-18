@@ -50,6 +50,16 @@
             $(window).load(function(){
                 $(".bubble").fadeIn(500);
             });
+
+		$(window).on("orientationchange", function(event) {
+			$(window).one('resize', function() {
+			if (window.innerWidth > window.innerHeight) {
+				//$('div').text('가로 모드 전환')
+			} else {
+				alert('금지');
+			}
+			});
+		});
         })
     </script>
 </body>
