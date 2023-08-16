@@ -1,97 +1,157 @@
-﻿<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
-<head>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, minimum-scale=0.8, user-scalable=no, shrink-to-fit=no">
 	<title>교과평 튜토리얼</title>
 	<link rel="shortcut icon" href="/favicon.ico">
 
-	<script type="text/javascript" charset="utf-8" src="js/libs/jquery-1.10.2.min.js"></script><!-- (기본)jQuery -->
-	<script type="text/javascript" charset="utf-8" src="js/libs/jquery-ui-1.9.2.custom.min.js"></script><!-- (기본) jQuery UI-->
+	<script type="text/javascript" charset="utf-8" src="js/jquery-3.3.1.min.js"></script><!-- (기본)jQuery -->
 	
-	<link rel="stylesheet" type="text/css" href="css/webfont.css">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/colors.css">
 	<link rel="stylesheet" type="text/css" href="css/button.css">
 	<link rel="stylesheet" type="text/css" href="css/tutorial_style.css">
-	
+	<style>
+		.progress ul:after {width:calc((100%/19)*2)}
+	</style>
 </head>
 
 <body>
 	<div class="container">
 		<div class="inner">
-			<div class="mainview scene02">
-				<div id="nextBtn"><a href="#" class="button blue-gradient glossy xlarge">▶ 다음단계</a></div>
-				<div class="img01">
-					<img src="css/image/tut_0001.png">
+			<div class="progress">
+				<div class="progress-level"></div>
+				<ul>
+					<li><a href="scene01.html"><span>로그인</span></a></li>
+					<li class="on"><a href="scene02.html"><span>오늘의 시험</span></a></li>
+					<li><a href="scene03.html"><span>화면구성</span></a></li>
+					<li><a href="scene04.html"><span>배열변경</span></a></li>
+					<li><a href="scene05.html"><span>시험시작</span></a></li>
+					<li><a href="scene06.html"><span>응시상태</span></a></li>
+					<li><a href="scene07.html"><span>응시자관리</span></a></li>
+					<li><a href="scene08.html"><span>시험지보기</span></a></li>
+					<li><a href="scene09.html"><span>응시시작시간확인</span></a></li>
+					<li><a href="scene10.html"><span>영상재생초기화</span></a></li>
+					<li><a href="scene11.html"><span>시간연장</span></a></li>
+					<li><a href="scene12.html"><span>시간연장내역확인</span></a></li>
+					<li><a href="scene13.html"><span>부정행위처리</span></a></li>
+					<li><a href="scene14.html"><span>중도포기</span></a></li>
+					<li><a href="scene15.html"><span>응시완료 처리</span></a></li>
+					<li><a href="scene16.html"><span>시험 재응시 처리</span></a></li>
+					<li><a href="scene17.html"><span>시험 종료</span></a></li>
+					<li><a href="scene18.html"><span>시험재시작</span></a></li>
+					<li><a href="scene19.html"><span>종료</span></a></li>
+				</ul>
+			</div>
+			<div class="mainview scene00 on">
+				<!-- speech 010 011 012 013...  -->
+				<div class="imgW img00">
+					<img src="image/sup_0001.png">
 				</div>
-				<div class="speech step0">
-					<span class="bubble none" style="width:600px;height:100px;">
+				<div class="next_btn" onclick="">
+					<a href="#" class="button blue-gradient glossy xlarge">▶ 다음단계</a>
+				</div>
+				<div class="speech step00 on" style="bottom:60px;">
+					<span class="bubble none">
 						<div class="a_C">
-							<p class="txt a_C">
-								로그인 완료 후 화면에 표시된 <span class="blue">응시 교과목 정보</span>를 확인합니다.<br>
-								<span class="blue">‘ ▶ 다음단계 ’ </span>버튼을 클릭하세요.
-							</p>
+						<p class="txt">본인에게 배정된 오늘의 시험이 있는 경우 로그인 후 <span class="blue">알림창이 표시</span>됩니다.</p>
 						</div>
 					</span>
+					<a href="javascript:" class="highlight nolink none" style="width: 270px;height: 200px;bottom: 146px;left: 340px;"></a>
+					
 				</div>
-				<a href="javascript:" class="highlight_line nolink step0 none" style="width:700px;height:245px;top:398px;right:288px;"></a>
-				
-				<div class="speech step1">
-					<span class="bubble none" style="width:550px;height:125px;">
+
+				<div class="speech step01 last">
+					<span class="bubble none">
 						<div class="a_C">
-							<p class="txt a_C">
-								시험에 응시할 수 있는 상태가 되면<br>
-								<span class="blue">해당 교과목 시험 응시란 버튼이 ‘ 응시하기 ’ 로 표시</span> 됩니다.<br>
-								<span class="blue">‘ ▶ 다음단계 ’ </span>버튼을 클릭하세요.
-							</p>
+							<p class="txt">
+                                ‘바로가기’ 버튼을 클릭해서 오늘의 시험을 시행할 수 있습니다.<br><span class="blue">'바로가기' 버튼</span>을 클릭하세요.
+                            </p>
 						</div>
 					</span>
-				</div>
-				
-				<a href="javascript:" class="highlight_line nolink step1 none" style="width:143px;height:245px;top:398px;right:288px;"></a>
-				
-				<div class="speech step2">
-					<span class="bubble none" style="width:740px;height:136px;">
-						<div class="a_C">
-							<p class="txt a_C">
-								본 시험에 앞서 온라인 평가 응시 방법을 알아보겠습니다.<br>
-								<span class="blue">‘ 응시하기 ’ </span>버튼을 클릭하세요.
-							</p>
-						</div>
-					</span>
+					<a href="javascript:" class="highlight next_btn none" style="width:90px;height:40px;bottom:246px; left:366px"></a>
 				</div>
 			</div>
-			
+
+			<div class="mainview scene01">
+				<div class="imgW img01">
+					<img src="image/sup_0002.png">
+				</div>
+				<div class="next_btn" onclick="">
+					<a href="#" class="button blue-gradient glossy xlarge">▶ 다음단계</a>
+				</div>
+				<div class="speech step00 on last">
+					<span class="bubble none">
+						<div class="a_C">
+						<p class="txt">시험시간표에서 오늘 시행할 시험정보가 맞는지 확인하고<br>‘시험시행’ 버튼을 클릭해서 감독교사 프로그램을 실행합니다.<br>
+						<span class="blue">‘시험시행’ 버튼</span>을 클릭하세요.</p>
+						</div>
+					</span>
+					<a href="javascript:" class="highlight next_btn none" style="width: 77px;height: 36px;bottom: 204px;left: 701px;"></a>
+				</div>
+			</div>
 		</div>
 	</div>
-</body>
+	<script>
+		$(function () {
+			
+			let stepNum = 0; // 이미지 내 박스 초기화
+			
 
-<script>
-	$(document).ready(function(){
-		var stepNum = 1;
-		
-		$(".speech.step0 .bubble, .highlight_line.step0 ").delay(400).fadeIn(400);
-		
-		$("#nextBtn").on("click", function(){
-			nextStep(stepNum++);
-		});
-		
-		function nextStep(stepNum){
-			$(".speech .bubble").clearQueue().fadeOut(400);
-			$(".highlight_line").clearQueue().fadeOut(400);
-		
-			$(".speech.step"+stepNum+" .bubble").delay(600).fadeIn(400);
-			$(".highlight_line.step"+stepNum).delay(200).fadeIn(400);
-		
-			if(stepNum == 2){
-				document.location = "scene02-2.html";
+			function nextStep(){// 같은 이미지 내 text + box(nolink or next_btn) 
+				let stepLast = $('.mainview.on .speech').length; //콘텐츠 개수 카운트
+				stepNum+=1;
+				//console.log(stepNum,stepLast);
+
+				$(".mainview.on .speech").removeClass("on");
+				$(".mainview.on .speech.step0"+stepNum).addClass("on");
+				if(stepNum == stepLast){
+					$(".next_btn").addClass("last");
+				}
+				else {
+					$(".next_btn").removeClass("last");
+					
+				}
+				if($(".next_btn").hasClass("last")){
+					//console.log('last class O');
+					nextScene(); //이미지 기준
+				}
+				
 			}
-		}
-		
-	});
-</script>
 
+			let sceneNum = 0; // 이미지 기준 초기화
+			let sceneLast = $('.mainview').length; //콘텐츠 개수 카운트
+			function nextScene(){
+				stepNum = 0;
+				sceneNum++;
+
+				$(".mainview").removeClass("on");
+				$(".mainview.scene0"+sceneNum).addClass("on");
+
+				if(sceneNum == sceneLast) { //다음 페이지로 이동
+					document.location = "scene03.html";
+				}
+			}
+
+			
+		
+
+			//button click
+			$(".next_btn").on("click", function(){
+				nextStep();
+				
+				//next Button
+				if($(".mainview.on .speech.on .next_btn").length==1){
+					$(".mainview.on>.next_btn").addClass("none");
+				}
+				else {$(".mainview.on>.next_btn").removeClass("none");}
+			});
+
+			
+
+		});
+	</script>
+</body>
 </html>
