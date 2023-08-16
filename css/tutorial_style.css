@@ -92,8 +92,8 @@ body {padding:0;margin:0;height:100%;width:100%;font-size:13px;line-height:1.5; 
 }
 
 .speech .bubble {animation:fadein;animation-duration:1s;animation-fill-mode: both; }
-.speech.on .bubble {display:block;}
-
+.speech.on .bubble {display:block; margin:auto; max-width:91%;}
+@media screen and (max-width:1481px) {.speech .bubble {font-size:23px;}}
 /*@media screen and (max-width:1481px) {
 	.container .mainview {width:768px; height:460px; top:-75px;}
 	.speech .bubble {font-size:23px;}
