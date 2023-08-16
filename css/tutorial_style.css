@@ -14,10 +14,6 @@ body {padding:0;margin:0;height:100%;width:100%;font-size:13px;line-height:1.5; 
 .container .inner {display:table-cell;width:100%;height:100%;vertical-align:middle;width:1024px;height:614px;position:relative;}
 .container .mainview {position:relative;margin:auto;width:1024px;height:614px;overflow:hidden;border:1px solid #000000; box-sizing:border-box; display:none;}
 
-@media screen and (max-width:1281px) {
-	.container .mainview {width:768px; height:460px;}
-}
-
 .mainview.on {display:block;}
 .container .inner img {image-rendering: -webkit-optimize-contrast; width:100%; height:100%;}
 
@@ -42,6 +38,10 @@ body {padding:0;margin:0;height:100%;width:100%;font-size:13px;line-height:1.5; 
 .next_btn {position:absolute;}
 
 .character_popup {position:absolute;width:100%;height:100%;z-index:10001;top:0;left:0;background:rgba(0,0,0,0.5);}
+
+@media screen and (max-width:1281px) {
+	.container .mainview {width:768px; height:460px;}
+}
 
 /* 튜토리얼 첫페이지 */
 .mainview.start {display:block;}
