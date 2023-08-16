@@ -18,7 +18,7 @@ body {padding:0;margin:0;height:100%;width:100%;font-size:13px;line-height:1.5; 
 .container .inner img {image-rendering: -webkit-optimize-contrast; width:100%; height:100%;}
 
 
-.speech {position:absolute;z-index:51; left:50%; transform:translateX(-50%); bottom:1vh;}
+.speech {position:absolute;z-index:51; left:50%; transform:translateX(-50%); bottom:1vh; width:100%;}
 .speech.on .bubble, .speech.on .highlight {display:block;}
 .start .speech {bottom:auto;}
 
@@ -52,7 +52,7 @@ body {padding:0;margin:0;height:100%;width:100%;font-size:13px;line-height:1.5; 
 .mainview.start .group1 {padding:70px 0 0px;background:#147fb5;line-height:1.2;}
 .mainview.start .group2 {margin-top:150px;padding:18px;background:rgba(255,255,255,0.3);}
 
-.inner .next_btn {position:absolute;z-index:1010;bottom:0px;right:0px;}
+.inner .next_btn {position:absolute;z-index:1010;bottom:0px;right:0px; position:relative; right:auto;}
 #finishBtn {position:absolute;z-index:1010;bottom:0px;right:0px;}
 
 /* 다음단계 */
@@ -93,7 +93,7 @@ body {padding:0;margin:0;height:100%;width:100%;font-size:13px;line-height:1.5; 
 }
 
 .speech .bubble {animation:fadein;animation-duration:1s;animation-fill-mode: both; }
-.speech.on .bubble {display:block;}
+.speech.on .bubble {display:block; max-width:88%; margin:auto; width:auto;}
 
 @keyframes fadein {
     from {
