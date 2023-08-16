@@ -1,7 +1,5 @@
-﻿@charset "utf-8";
-/*----------------------------------------------------------------------*/
-/*  Layout*/
-/*----------------------------------------------------------------------*/
+@charset "utf-8";
+
 .group { *zoom: 1; }
 .group:before, .group:after { display: table; content: ""; }
 .group:after { clear: both; }
@@ -13,57 +11,119 @@ body {padding:0;margin:0;height:100%;width:100%;font-size:13px;line-height:1.5; 
 
 .container {display:table;height:100%;width:100%;overflow:hidden;background:#ffffff;}
 
-.container.alert:after {content:"가로 화면으로 테스트 부탁드립니다"; width:100vw; height:100vh; background-color:rgba(0, 0, 0, 0.8); left:0; top:0; position:fixed; z-index:60; color:#fff; text-align:center; display:flex; align-items:center; justify-content:center; font-size:28px; letter-spacing:-0.03em;}
+.container .inner {display:table-cell;width:100%;height:100%;vertical-align:middle;width:1024px;height:614px;position:relative;}
+.container .mainview {position:relative;margin:auto;width:1024px;height:614px;overflow:hidden;border:1px solid #000000; box-sizing:border-box; display:none; position:absolute; left:50%; bottom:50%; transform:translate(-50%,60%);}
 
-.container .inner {display:table-cell;width:100%;height:100%;vertical-align:middle;}
-.container .mainview {position:relative;margin:auto;width:1280px;height:768px;overflow:hidden;border:1px solid #000000; box-sizing:border-box;}
-.container .inner img {image-rendering: -webkit-optimize-contrast;}
+@media screen and (max-width:1281px) {
+	.container .mainview {width:44%; height:54%;}
+}
 
-
-.container .mainview.scene03 {background:url(images/tutorial2/img_03.png) no-repeat;}
-.container .mainview.scene03.step2 {background:url(images/tutorial2/img_15.png) no-repeat;}
-.container .mainview.scene03.step3 {background:url(images/tutorial2/img_16.png) no-repeat;}
-.container .mainview.scene03.step4 {background:url(images/tutorial2/img_22.png) no-repeat;}
-
-.container .mainview.scene14 .pointer {position:absolute;top:504px;left:495px;width:14px;height:21px;background:url(../css/images/tutorial2/pointer.png) no-repeat;}
+.mainview.on {display:block;}
+.container .inner img {image-rendering: -webkit-optimize-contrast; width:100%; height:100%;}
 
 
-.speech {position:absolute;z-index:51; left:50%; transform:translateX(-50%); bottom:1vh;}
+.speech {position:fixed;z-index:51; left:50%; transform:translateX(-50%); bottom:1vh;}
+.speech.on .bubble, .speech.on .highlight {display:block;}
 .start .speech {bottom:auto;}
-.speech .character {vertical-align:bottom;}
-.speech .character.c01 {width:167px;height:144px;background:url(images/tutorial/crt2.png) no-repeat;} 
-.speech .bubble {border:4px solid #444444;background:#fff;overflow:hidden;line-height:1.3em;letter-spacing:-0.05em; font-size:20px;font-weight:800;text-align:left;word-break:break-word;-webkit-box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);-moz-box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+
+.speech .bubble {border:4px solid #444444;background:#fff;overflow:hidden;line-height:1.3em;letter-spacing:-0.05em; font-size:26px;font-weight:800;text-align:left;word-break:break-word; padding:0 30px; -webkit-box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);-moz-box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 .speech .bubble > div {padding:20px 32px;white-space:nowrap !important;}
-.speech .bubble > div  b {color:#0059a0;}
 .speech .bubble span {display:inline;vertical-align:top;}
 .speech .bubble .arrow {position:absolute;}
 .speech .bubble .arrow.left {width:24px;height:30px;left:-20px;background:url(images/tutorial/speech_bubble_left.png) no-repeat;}
 .speech .bubble .arrow.bottom {width:24px;height:30px;bottom:-28px;background:url(images/tutorial/speech_bubble_bottom.png) no-repeat;}
 
-.highlight_line {position:absolute;border:4px solid #ff3333;z-index:50;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius:6px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
-.highlight_line.nolink {pointer-events:none;user-select:none;-ms-user-select:none;-webkit-user-select:none;}
+.highlight {position:absolute;border:4px solid #ff3333;z-index:50;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius:6px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.highlight.nolink {pointer-events:none;user-select:none;-ms-user-select:none;-webkit-user-select:none;}
 .hidden_btn {position:absolute;z-index:60;}
 .hidden_img {position:absolute;z-index:20;}
-.font-shadow {-webkit-text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
-	-moz-text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
-	text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
-}
+.font-shadow {-webkit-text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);-moz-text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);}
 .animation_focus {position:absolute;z-index:40;}
 .next_btn {position:absolute;}
 
 .character_popup {position:absolute;width:100%;height:100%;z-index:10001;top:0;left:0;background:rgba(0,0,0,0.5);}
 
-.mainview.start .area {}
+/* 튜토리얼 첫페이지 */
+.mainview.start {display:block;}
 .mainview.start .group1 {height:280px;}
 .mainview.start .title1 {font-size:40px;color:#fff;font-weight:800;margin-top:0px;} 
 .mainview.start .title2 {font-size:40px;color:#fff;font-weight:800;} 
 .mainview.start .start_btn img {height:92px;width:auto;}
 .mainview.start .group1 {padding:70px 0 0px;background:#147fb5;line-height:1.2;}
-.mainview.start .group2 {margin-top:250px;padding:18px;background:rgba(255,255,255,0.3);}
+.mainview.start .group2 {margin-top:150px;padding:18px;background:rgba(255,255,255,0.3);}
 
-#nextBtn {position:absolute;z-index:1010;bottom:0px;right:0px;background:rgba(255,255,255,0.5);}
-#finishBtn {position:absolute;z-index:1010;padding:12px 14px;bottom:0px;right:0px;background:rgba(255,255,255,0.5);}
+.inner .next_btn {position:absolute;z-index:1010;bottom:0px;right:0px;}
+#finishBtn {position:absolute;z-index:1010;bottom:0px;right:0px;}
+
 /* 다음단계 */
 .button.xlarge {padding: 0 24px;font-size: 20px;font-weight:600;line-height: 43px;height: 44px;margin-top: 0;margin-bottom: 0;border-width:2px;}
 .start .button {padding: 16px 32px;}
 
+/* progress */
+.progress{width:100%; position:fixed; top:0; left:0;}
+.progress ul {display:flex; align-items:center; position:relative;}
+.progress ul li {width:10%; text-align:center; font-size:12px; border-bottom:1px solid #ddd; max-height:22px;}
+.progress ul li a {padding-top:4px; display:block;position:relative; top:26px;}
+.progress ul li a:active, .progress ul li a:hover, .progress ul li.on a {color:#000; font-weight: bolder;}
+.progress ul li a:before {content:""; display:block; position:absolute;  right:0; top:-26px; background-color:#ddd; width:1px; height:22px;}
+/* .progress ul li:hover a:before, .progress ul li.on a:before {} */
+
+.progress ul:after {content:""; display:block; position:absolute; height:15px; background-color:#1f85e4ad; animation: ani;animation-duration: 0.4s;animation-fill-mode: both; top:3px;}
+
+.progress-level{height:15px; top:3px; width:100%; /*background : linear-gradient(to right, rgb(255, 199, 208), rgb(255, 238, 142));*/position:absolute; z-index:0; background-color:#1f85e444}
+@keyframes ani{
+    0%{
+        width: 0; 
+    }
+}
+@-moz-keyframes ani{
+    0%{
+        width: 0; 
+    }
+}
+@-webkit-keyframes ani{
+    0%{
+        width: 0; 
+    }
+}
+@-o-keyframes ani{
+    0%{
+        width: 0; 
+    }
+}
+
+.speech .bubble {animation:fadein;animation-duration:1s;animation-fill-mode: both; }
+.speech.on .bubble {display:block;}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
