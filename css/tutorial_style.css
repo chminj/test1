@@ -62,15 +62,15 @@ body {padding:0;margin:0;height:100%;width:100%;font-size:13px;line-height:1.5; 
 /* progress */
 .progress{width:100%; position:fixed; top:0; left:0;}
 .progress ul {display:flex; align-items:center; position:relative;}
-.progress ul li {width:10%; text-align:center; font-size:12px; border-bottom:1px solid #ddd;}
-.progress ul li a {padding-top:4px; display:block;position:relative; top:0;}
+.progress ul li {width:10%; text-align:center; font-size:12px;}
+.progress ul li a {padding-top:4px; display:block;position:relative; top:0; z-index:4; color:#fff;}
 .progress ul li a:active, .progress ul li a:hover, .progress ul li.on a {color:#fff; font-weight: bolder;}
 /* .progress ul li a:before {content:""; display:block; position:absolute;  right:0; top:-26px; background-color:#ddd; width:1px; height:22px;} */
 /* .progress ul li:hover a:before, .progress ul li.on a:before {} */
 
-.progress ul:after {content:""; display:block; position:absolute; height:36px; background-color:#1f85e4ad; animation: ani;animation-duration: 0.4s;animation-fill-mode: both; top:3px;}
+.progress ul:after {content:""; display:block; position:absolute; height:40px; background-color:#1f85e4ad; animation: ani;animation-duration: 0.4s;animation-fill-mode: both; top:0px;}
 
-.progress-level{height:36px; top:3px; width:100%; /*background : linear-gradient(to right, rgb(255, 199, 208), rgb(255, 238, 142));*/position:absolute; z-index:0; background-color:#1f85e444}
+.progress-level{height:40px; top:0px; width:100%; /*background : linear-gradient(to right, rgb(255, 199, 208), rgb(255, 238, 142));*/position:absolute; z-index:0; background-color:#1f85e444}
 @keyframes ani{
     0%{
         width: 0; 
