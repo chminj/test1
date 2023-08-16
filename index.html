@@ -121,24 +121,13 @@
 				}
 			}
 
-			//auto 
-			let autoInterval = setInterval(function(){
-				nextStep();
-				//next Button
-				if($(".mainview.on .speech.on .next_btn").length==1){
-						$(".mainview.on>.next_btn").addClass("none");
-					}
-					else {$(".mainview.on>.next_btn").removeClass("none");}
-			},5000);
+
 		
 
 			//button click
 			$(".next_btn").on("click", function(){
 				nextStep();
-				clearInterval(autoInterval);
-				let autoInterval = setInterval(function(){
-				nextStep();
-				},5000);
+				
 				
 				//next Button
 				if($(".mainview.on .speech.on .next_btn").length==1){
