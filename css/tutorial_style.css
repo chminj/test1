@@ -39,9 +39,7 @@ body {padding:0;margin:0;height:100%;width:100%;font-size:13px;line-height:1.5; 
 
 .character_popup {position:absolute;width:100%;height:100%;z-index:10001;top:0;left:0;background:rgba(0,0,0,0.5);}
 
-@media screen and (max-width:1281px) {
-	.container .mainview {width:768px; height:460px; top:-90px;}
-}
+
 
 /* 튜토리얼 첫페이지 */
 .mainview.start {display:block;}
@@ -94,7 +92,13 @@ body {padding:0;margin:0;height:100%;width:100%;font-size:13px;line-height:1.5; 
 }
 
 .speech .bubble {animation:fadein;animation-duration:1s;animation-fill-mode: both; }
-.speech.on .bubble {display:block; max-width:88%; margin:auto; width:auto;}
+.speech.on .bubble {display:block;}
+
+@media screen and (max-width:1481px) {
+	.container .mainview {width:768px; height:460px; top:-75px;}
+	.speech .bubble {font-size:23px;}
+	.speech.on .bubble {display:block; max-width:88%; margin:auto; width:auto; min-width:88%;}
+}
 
 @keyframes fadein {
     from {
