@@ -6,68 +6,152 @@
 	<title>교과평 튜토리얼</title>
 	<link rel="shortcut icon" href="/favicon.ico">
 
-	<script type="text/javascript" charset="utf-8" src="js/libs/jquery-1.10.2.min.js"></script><!-- (기본)jQuery -->
-	<script type="text/javascript" charset="utf-8" src="js/libs/jquery-ui-1.9.2.custom.min.js"></script><!-- (기본) jQuery UI-->
+	<script type="text/javascript" charset="utf-8" src="js/jquery-3.3.1.min.js"></script><!-- (기본)jQuery -->
 	
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/colors.css">
 	<link rel="stylesheet" type="text/css" href="css/button.css">
 	<link rel="stylesheet" type="text/css" href="css/tutorial_style.css">
-	
+	<style>
+		.progress ul:after {width:100%;}
+	</style>
 </head>
 
 <body>
 	<div class="container">
 		<div class="inner">
-			<div class="mainview start">
-				
-				<div class="area start">
-					<div class="group1 a_C">
-						<p class="title1 font-shadow">한국교육과정평가원</p>
-						<p class="title2 font-shadow">컴퓨터 기반 평가 학업성취도 평가</p>
-						<span class="width-300px fs_28 bold xlarge-margin-top white-bg blue" style="padding:7px 0 10px;">응시 안내</span>
-					</div>
-					
-					<div class="group2 a_C">
-						<a href="scene01.html" class="button blue-gradient width-120px fs_24 bold black-line">시작하기</a>
-					</div>
+			<div class="progress">
+				<div class="progress-level"></div>
+				<ul>
+					<li><a href="scene01.html"><span>로그인</span></a></li>
+					<li><a href="scene02.html"><span>오늘의 시험</span></a></li>
+					<li><a href="scene03.html"><span>화면구성</span></a></li>
+					<li><a href="scene04.html"><span>배열변경</span></a></li>
+					<li><a href="scene05.html"><span>시험시작</span></a></li>
+					<li><a href="scene06.html"><span>응시상태</span></a></li>
+					<li><a href="scene07.html"><span>응시자관리</span></a></li>
+					<li><a href="scene08.html"><span>시험지보기</span></a></li>
+					<li><a href="scene09.html"><span>응시시작시간확인</span></a></li>
+					<li><a href="scene10.html"><span>영상재생초기화</span></a></li>
+					<li><a href="scene11.html"><span>시간연장</span></a></li>
+					<li><a href="scene12.html"><span>시간연장내역확인</span></a></li>
+					<li><a href="scene13.html"><span>부정행위처리</span></a></li>
+					<li><a href="scene14.html"><span>중도포기</span></a></li>
+					<li><a href="scene15.html"><span>응시완료 처리</span></a></li>
+					<li><a href="scene16.html"><span>시험 재응시 처리</span></a></li>
+					<li><a href="scene17.html"><span>시험 종료</span></a></li>
+					<li><a href="scene18.html"><span>시험재시작</span></a></li>
+					<li class="on"><a href="scene19.html"><span>종료</span></a></li>
+				</ul>
+			</div>
+			<div class="mainview scene00 on">
+				<div class="imgW img00">
+					<img src="image/sup_0056_1.png">
 				</div>
-				
-				<div class="speech" style="top:400px;">
-					<span class="bubble none" style="width: 500px;">
+				<div class="speech step00 on last">
+					<span class="bubble none">
 						<div class="a_C">
-							<span class="txt">온라인 시험 응시 방법을 알아보겠습니다.<br>준비가 되면 <span class="blue">‘시작하기’ 버튼</span>을 클릭하세요. </span>
+						<p class="txt">시험종료 후에는 감독교사 프로그램을 종료합니다.<br><span class="blue">‘닫기’ 버튼</span>을 클릭하세요.</p>
+						</div>
+					</span>
+					<a href="javascript:" class="highlight next_btn none" style="width: 157px;height: 30px;bottom: 154px;left: 698px;"></a>
+				</div>
+            </div>
+
+
+            <div class="mainview scene01 last">
+				<div class="imgW img01">
+					<img src="image/sup_0057_1.png">
+				</div>
+				<div class="speech step00 on last">
+					<span class="bubble none">
+						<div class="a_C">
+						<p class="txt">감독교사 프로그램 안내를 마치겠습니다.<br>
+                            이제 <span class="blue">본 시험을 시행</span>하시기 바랍니다.</p>
 						</div>
 					</span>
 				</div>
+                <div id="finishBtn">
+					<a href="start.html" class="button blue-gradient glossy xlarge">다시해보기</a>
+					<a href ="#" onClick="closeTabClick()" id="btn" class="button anthracite-gradient glossy xlarge">창닫기</a>
+				</div>
+            </div>
+        </div>
+    </div>
+	<script>
+		$(function () {
+			
+			let stepNum = 0; // 이미지 내 박스 초기화
+			
+			let sceneNum = 0; // 이미지 기준 초기화
+			let sceneLast = $('.mainview').length; //콘텐츠 개수 카운트
 
-			</div>
-		</div>
-	</div>
-    <script>
-        $(function () {
-           $(window).load(function(){
-                $(".bubble").fadeIn(500);
-			if (window.innerWidth < window.innerHeight) {
-				$('.container').addClass('alert');
-			} else {
-				// 가로모드 - 복구
-				$('.container').removeClass('alert');
-			}
-            });
-// 가로-세로모드 전환 확인
-		$(window).on("orientationchange", function(event) {
-			$(window).one('resize', function() {
-				if (window.innerWidth < window.innerHeight) {
-					$('.container').addClass('alert');
-				} else {
-					// 가로모드 - 복구
-					$('.container').removeClass('alert');
+			function nextStep(){// 같은 이미지 내 text + box(nolink or next_btn) 
+				let stepLast = $('.mainview.on .speech').length; //콘텐츠 개수 카운트
+				stepNum+=1;
+				//console.log(stepNum,stepLast);
+
+				$(".mainview.on .speech").removeClass("on");
+				$(".mainview.on .speech.step0"+stepNum).addClass("on");
+				if(stepNum == stepLast){
+					$(".next_btn").addClass("last");
 				}
+				else {
+					$(".next_btn").removeClass("last");
+					
+				}
+				if($(".next_btn").hasClass("last")){
+					//console.log('last class O');
+					nextScene(); //이미지 기준
+				}
+				
+			}
+
+			
+			function nextScene(){
+				stepNum = 0;
+				sceneNum++;
+
+				$(".mainview").removeClass("on");
+				$(".mainview.scene0"+sceneNum).addClass("on");
+
+				if($("#finishBtn")){
+					clearInterval(autoInterval);
+				}
+			}
+
+			//auto 
+			let autoInterval = setInterval(function(){
+				nextStep();
+				//next Button
+				if($(".mainview.on .speech.on .next_btn").length==1){
+						$(".mainview.on>.next_btn").addClass("none");
+					}
+					else {$(".mainview.on>.next_btn").removeClass("none");}
+			},5000);
+		
+
+			//button click
+			$(".next_btn").on("click", function(){
+				nextStep();
+				clearInterval(autoInterval);
+				let autoInterval = setInterval(function(){
+				nextStep();
+				},5000);
+				
+				//next Button
+				if($(".mainview.on .speech.on .next_btn").length==1){
+					$(".mainview.on>.next_btn").addClass("none");
+				}
+				else {$(".mainview.on>.next_btn").removeClass("none");}
 			});
+
+			function closeTabClick() {
+				window.close();
+			}
+
 		});
-        })
-    </script>
+	</script>
 </body>
 </html>
