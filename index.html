@@ -12,135 +12,90 @@
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/colors.css">
 	<link rel="stylesheet" type="text/css" href="css/button.css">
-	<link rel="stylesheet" type="text/css" href="css/tutorial_style.css">
-	<style>
-		.progress ul:after {width:calc((100%/19)*14)}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 
 <body>
-	<div class="container">
-		<div class="inner">
-			<div class="progress">
-				<div class="progress-level"></div>
-				<ul>
-					<li><a href="scene01.html"><span>로그인</span></a></li>
-					<li><a href="scene02.html"><span>오늘의 시험</span></a></li>
-					<li><a href="scene03.html"><span>화면구성</span></a></li>
-					<li><a href="scene04.html"><span>배열변경</span></a></li>
-					<li><a href="scene05.html"><span>시험시작</span></a></li>
-					<li><a href="scene06.html"><span>응시상태</span></a></li>
-					<li><a href="scene07.html"><span>응시자관리</span></a></li>
-					<li><a href="scene08.html"><span>시험지보기</span></a></li>
-					<li><a href="scene09.html"><span>응시시작<br>시간확인</span></a></li>
-					<li><a href="scene10.html"><span>영상재생<br>초기화</span></a></li>
-					<li><a href="scene11.html"><span>시간연장</span></a></li>
-					<li><a href="scene12.html"><span>시간연장<br>내역확인</span></a></li>
-					<li><a href="scene13.html"><span>부정행위<br>처리</span></a></li>
-					<li class="on"><a href="scene14.html"><span>중도포기</span></a></li>
-					<li><a href="scene15.html"><span>응시완료<br>처리</span></a></li>
-					<li><a href="scene16.html"><span>시험 재응시<br>처리</span></a></li>
-					<li><a href="scene17.html"><span>시험 종료</span></a></li>
-					<li><a href="scene18.html"><span>시험재시작</span></a></li>
-					<li><a href="scene19.html"><span>종료</span></a></li>
-				</ul>
+<div id="divWrapper">
+		<!-- header -->
+		<div class="header">
+			<div>
+				<h1>
+					<a href="/"><img src="/css/images/republish/eduLogo2.png" alt="로고"></a>
+					<a href="/"><img src="/css/images/republish/logo.png" title="로고"></a>
+				</h1>
+				<!-- <div class="globalMenu">
+					<a href="" class="join">회원가입</a>
+				</div> -->
 			</div>
-			<div class="mainview scene00 on">
-				<div class="imgW img00">
-					<img src="css/image/tut_0002.png">
-				</div>
-				<div class="speech step00 on last">
-					<span class="bubble none">
-						<div class="a_C">
-						<p class="txt">시험종료 후에는 감독교사 프로그램을 종료합니다.<br><span class="blue">‘닫기’ 버튼</span>을 클릭하세요.</p>
+		</div>
+		<!-- //header -->
+		<!-- contents -->
+		<div class="contents">
+			<div>
+				<form name="form" method="POST">
+					<div class="loginBoxW">
+					<div class="loginBoxL">
+						<p class="agency" style="font-size: 44px;"><span>학업성취도 평가 시스템(학생용)</span></p>
+						<!-- loginBox -->
+						<div class="loginBox">
+							<div>
+								<div class="leftCon loginInput">
+									<input type="text" id="logInId" class="inputTextType2" onkeypress="if(event.keyCode==13) {_login(form); return false;}" value="" placeholder="아이디">
+									<input type="password" id="pwd" class="inputTextType2" onkeypress="if(event.keyCode==13) {_login(form); return false;}" value="" placeholder="비밀번호">
+								</div>
+								<div class="rightCon loginBtnW">
+									<input type="submit" value="로그인" class="loginBtn" onclick="javascript:_login(form); return false;">
+								</div>
+							</div>
+							
+							<div class="loginInfo">
+								<ul>
+									<li>부여 받은 사용자 계정으로만 시스템에 접근할 수 있습니다.</li>
+									<li style="top:3px;">2대 이상의 PC에서 동시 로그인이 불가능 합니다.</li>
+<!-- 									<li style="top:6px;">시험에 앞서 응시 화면의 설명과 문항별 응답 방법을 확인해 보세요. <a href="javascript:viewTutorial();" style="display:inline-block;width:60px;height:20px;background:#31a952;border:none;border-radius: 5px;color:#fff;text-align:center;font-family: NotoSansM,sans-serif;;line-height: 20px;cursor: pointer;">알아보기</a></li> -->
+<!-- 									<li style="top:6px;">컴퓨터 기반 학업성취도 평가 체험하기 : <a href="https://znaea.kice.re.kr/siteMain/eIndex.do" target="_blank()" style="display:inline-block;width:60px;height:20px;background:#31a952;border:none;border-radius: 5px;color:#fff;text-align:center;font-family: NotoSansM,sans-serif;;line-height: 20px;cursor: pointer;">초등용</a>&nbsp;&nbsp;&nbsp;<a href="http://slb-603087.gov-ncloudslb.com/siteMain/mIndex.do" target="_blank()" style="display:inline-block;width:60px;height:20px;background:#31a952;border:none;border-radius: 5px;color:#fff;text-align:center;font-family: NotoSansM,sans-serif;;line-height: 20px;cursor: pointer;">중등용</a>&nbsp;&nbsp;&nbsp;<a href="http://slb-603087.gov-ncloudslb.com/siteMain/hIndex.do" target="_blank()" style="display:inline-block;width:60px;height:20px;background:#31a952;border:none;border-radius: 5px;color:#fff;text-align:center;font-family: NotoSansM,sans-serif;;line-height: 20px;cursor: pointer;">고등용</a></li> -->
+									<li style="top:6px;">컴퓨터 기반 학업성취도 평가 체험하기 : <a href="https://znaea.kice.re.kr/siteMain/eIndex.do" target="_blank()" style="display:inline-block;width:60px;height:20px;background:#31a952;border:none;border-radius: 5px;color:#fff;text-align:center;font-family: NotoSansM,sans-serif;;line-height: 20px;cursor: pointer;">바로가기</a>
+									</li><li style="top:9px;">브라우저 스크린 사이즈 : <span id="deviceResolutionInfo"><font color="red">점검필요 , 1180 X 754(최소사양 : 1280 X 768)</font></span></li>
+								</ul>
+<!-- 							<br><a href="https://znaea.kice.re.krsiteMain/hIndex.do" target="_blank()" style="display:inline-block;padding: 7px 14px 8px 14px;background: rgba(76,99,124,0.95);color:#fff;font-size:14px;border-radius: 5px;margin-top:-10px">컴퓨터 기반 학업성취도 평가 체험하기</a> -->
+							<br><a href="https://www.google.co.kr/chrome/?brand=QCDH&amp;gclid=CjwKCAjw1ICZBhAzEiwAFfvFhAXj6lddRdLIMm1BAPi2d6RdJDmZC93b7rEXMYal17joJlqcZYJVyBoCdRAQAvD_BwE&amp;gclsrc=aw.ds" style="display:inline-block;padding: 7px 14px 8px 14px;background: rgba(76,99,124,0.95);color:#fff;font-size:14px;border-radius: 5px;margin-top:5px" target="_blank">크롬 브라우저 다운로드</a>
+							</div>
+							
+							
+							<script>
+							var __deviceWindowWidth = $(window).width();
+							var __deviceWindowHeight = $(window).height();
+
+							var __deviceWidth = window.screen.width;
+							var __deviceHeight = window.screen.height;
+							var __deviceRatio = window.devicePixelRatio || 1;
+							var __deviceRatioWidth = __deviceWidth * __deviceRatio;	//원본
+							var __deviceRatioHeight = __deviceHeight * __deviceRatio;	//원본
+							var __isDevicePass = false;
+							if( __deviceWidth >= 1280 || __deviceHeight >= 1280 ){
+								if( __deviceWidth >= 1280 &&  __deviceHeight < 768 ) {
+									__isDevicePass = false;
+								}else if( __deviceHeight >= 1280 &&  __deviceWidth < 768 ) {
+									__isDevicePass = false;
+								}else {
+									__isDevicePass = true;
+								}
+							}
+							
+							if( __isDevicePass ){
+								$("#deviceResolutionInfo").html("<font color='blue'>정상</font>");
+							}else {
+								$("#deviceResolutionInfo").html("<font color='red'>점검필요 , " + __deviceWidth + " X " + __deviceHeight +"(최소사양 : 1280 X 768)</font>");
+							}				
+							</script>
 						</div>
-					</span>
-					<a href="javascript:" class="highlight next_btn none" style="width: 157px;height: 30px;bottom: 154px;left: 698px;"></a>
-				</div>
-            </div>
-
-
-            <div class="mainview scene01 last">
-				<div class="imgW img01">
-					<img src="css/image/tut_0001.png">
-				</div>
-				<div class="speech step00 on last">
-					<span class="bubble none">
-						<div class="a_C">
-						<p class="txt">감독교사 프로그램 안내를 마치겠습니다.<br>
-                            이제 <span class="blue">본 시험을 시행</span>하시기 바랍니다.</p>
 						</div>
-					</span>
-				</div>
-                <div id="finishBtn">
-					<a href="start.html" class="button blue-gradient glossy xlarge">다시해보기</a>
-					<a href ="#" onClick="closeTabClick()" id="btn" class="button anthracite-gradient glossy xlarge">창닫기</a>
-				</div>
-            </div>
-        </div>
-    </div>
-	<script>
-		$(function () {
-			
-			let stepNum = 0; // 이미지 내 박스 초기화
-			
-			let sceneNum = 0; // 이미지 기준 초기화
-			let sceneLast = $('.mainview').length; //콘텐츠 개수 카운트
-
-			function nextStep(){// 같은 이미지 내 text + box(nolink or next_btn) 
-				let stepLast = $('.mainview.on .speech').length; //콘텐츠 개수 카운트
-				stepNum+=1;
-				//console.log(stepNum,stepLast);
-
-				$(".mainview.on .speech").removeClass("on");
-				$(".mainview.on .speech.step0"+stepNum).addClass("on");
-				if(stepNum == stepLast){
-					$(".next_btn").addClass("last");
-				}
-				else {
-					$(".next_btn").removeClass("last");
-					
-				}
-				if($(".next_btn").hasClass("last")){
-					//console.log('last class O');
-					nextScene(); //이미지 기준
-				}
-				
-			}
-
-			
-			function nextScene(){
-				stepNum = 0;
-				sceneNum++;
-
-				$(".mainview").removeClass("on");
-				$(".mainview.scene0"+sceneNum).addClass("on");
-
-				if($("#finishBtn")){
-					clearInterval(autoInterval);
-				}
-			}
-
-
-		
-
-			//button click
-			$(".next_btn").on("click", function(){
-				nextStep();
-				
-				
-				//next Button
-				if($(".mainview.on .speech.on .next_btn").length==1){
-					$(".mainview.on>.next_btn").addClass("none");
-				}
-				else {$(".mainview.on>.next_btn").removeClass("none");}
-			});
-
-			function closeTabClick() {
-				window.close();
-			}
-
-		});
-	</script>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- //contents -->
+	</div>
 </body>
 </html>
